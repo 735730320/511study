@@ -1,0 +1,5 @@
+demo4.js   1 2 3
+process.nextTick方法指定的回调函数，总是在当前"执行栈"的尾部触发
+而同步函数在栈中执行，且同步函数比异步函数优先执行，setTimeout是异步函数，所以3最后打印
+同理 在process.nextTick函数中 console.log是同步函数，优先级高于process.nextTick函数，所以先打印1
+最后结果1,2,3
